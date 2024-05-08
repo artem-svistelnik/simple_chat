@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  backend:
+    image: isi-chat
+    build:
+      context: src
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./src:/opt/backend/
+      - ./poetry.lock:/opt/poetry.lock
+      - ./pyproject.toml:/opt/pyproject.toml
+    ports:
+      - "8000:8000"
