@@ -1,0 +1,979 @@
+{
+	"info": {
+		"_postman_id": "84ed8f6e-7198-4341-a949-bd3f94556e0a",
+		"name": "isi_chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"user3\",\n    \"password\":\"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{locallhost}}api/auth/token/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"auth",
+								"token",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"user3\",\n    \"password\":\"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{locallhost}}api/auth/token/",
+									"host": [
+										"{{locallhost}}api"
+									],
+									"path": [
+										"auth",
+										"token",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 09 May 2024 01:01:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxNTMwMjg3NiwiaWF0IjoxNzE1MjE2NDc2LCJqdGkiOiJjYzkzODA1Y2RhNDM0NTk2YWIwMGY4NjUzZjYxODI3MiIsInVzZXJfaWQiOjN9.68JtyoFF1PbECS2eIWlWRdaCaujm1G3FSeAElUsvroc\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1MjE4Mjc2LCJpYXQiOjE3MTUyMTY0NzYsImp0aSI6IjJmYmFhMjVmMjVjYzQwZjNhOWM4MmM2NTMwMTlkNmQ4IiwidXNlcl9pZCI6M30.bMJC5pesikcYD1N_cAyoDIMwSheClXyUXIrKnsGSFWw\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Create Thread",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{locallhost}}api/chat/threads/",
+					"host": [
+						"{{locallhost}}api"
+					],
+					"path": [
+						"chat",
+						"threads",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Thread",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"participants\":[3,1]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{locallhost}}api/chat/threads/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"chat",
+								"threads",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 May 2024 00:58:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "81"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 9,\n    \"participants\": [\n        1,\n        3\n    ],\n    \"created_at\": \"2024-05-09\",\n    \"updated_at\": \"2024-05-09\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{locallhost}}api/chat/threads/",
+					"host": [
+						"{{locallhost}}api"
+					],
+					"path": [
+						"chat",
+						"threads",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Message",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\":\"sms 3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{locallhost}}api/chat/messages/:pk/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"chat",
+								"messages",
+								":pk",
+								""
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 08 May 2024 22:16:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "87"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"thread\": 5,\n    \"id\": 4,\n    \"sender\": 1,\n    \"text\": \"sms 3\",\n    \"is_read\": false,\n    \"created_at\": \"2024-05-08\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Read Message",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{locallhost}}api/chat/threads/",
+					"host": [
+						"{{locallhost}}api"
+					],
+					"path": [
+						"chat",
+						"threads",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Read Message",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{locallhost}}api/chat/messages/:pk/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"chat",
+								"messages",
+								":pk",
+								""
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 08 May 2024 22:42:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, PUT, PATCH, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"thread\": 5,\n    \"id\": 3,\n    \"sender\": 1,\n    \"text\": \"sms 2\",\n    \"is_read\": true,\n    \"created_at\": \"2024-05-08\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Threads",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{locallhost}}api/chat/threads/",
+					"host": [
+						"{{locallhost}}api"
+					],
+					"path": [
+						"chat",
+						"threads",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Threads",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locallhost}}api/chat/threads/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"chat",
+								"threads",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 May 2024 01:01:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "409"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 3,\n    \"next\": \"http://0.0.0.0:8000/api/chat/threads/?limit=2&offset=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 6,\n            \"participants\": [\n                3,\n                4\n            ],\n            \"created_at\": \"2024-05-08\",\n            \"updated_at\": \"2024-05-08\",\n            \"last_message\": {\n                \"thread\": null,\n                \"sender\": null,\n                \"text\": \"\",\n                \"is_read\": false\n            }\n        },\n        {\n            \"id\": 7,\n            \"participants\": [\n                3,\n                5\n            ],\n            \"created_at\": \"2024-05-09\",\n            \"updated_at\": \"2024-05-09\",\n            \"last_message\": {\n                \"thread\": null,\n                \"sender\": null,\n                \"text\": \"\",\n                \"is_read\": false\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Count Unread Messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{locallhost}}api/chat/threads/",
+					"host": [
+						"{{locallhost}}api"
+					],
+					"path": [
+						"chat",
+						"threads",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Count Unread Messages",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locallhost}}api/chat/messages/unread/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"chat",
+								"messages",
+								"unread",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 May 2024 01:18:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"unread_message_count\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Threads Messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{locallhost}}api/chat/messages/threads/:pk/",
+					"host": [
+						"{{locallhost}}api"
+					],
+					"path": [
+						"chat",
+						"messages",
+						"threads",
+						":pk",
+						""
+					],
+					"variable": [
+						{
+							"key": "pk",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Threads Messages",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locallhost}}api/chat/messages/threads/:pk/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"chat",
+								"messages",
+								"threads",
+								":pk",
+								""
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 08 May 2024 22:30:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "297"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 3,\n    \"next\": \"http://0.0.0.0:8000/api/chat/messages/threads/5/?limit=2&offset=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"thread\": 5,\n            \"id\": 2,\n            \"sender\": 1,\n            \"text\": \"12412afasfas\",\n            \"is_read\": false,\n            \"created_at\": \"2024-05-08\"\n        },\n        {\n            \"thread\": 5,\n            \"id\": 3,\n            \"sender\": 1,\n            \"text\": \"sms 2\",\n            \"is_read\": false,\n            \"created_at\": \"2024-05-08\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Thread",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{locallhost}}api/chat/threads/",
+					"host": [
+						"{{locallhost}}api"
+					],
+					"path": [
+						"chat",
+						"threads",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Thread",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locallhost}}api/chat/threads/:pk/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"chat",
+								"threads",
+								":pk",
+								""
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 08 May 2024 22:21:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "365"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"participants\": [\n        1,\n        2\n    ],\n    \"created_at\": \"2024-05-08\",\n    \"updated_at\": \"2024-05-08\",\n    \"messages\": [\n        {\n            \"thread\": 5,\n            \"id\": 2,\n            \"sender\": 1,\n            \"text\": \"12412afasfas\",\n            \"is_read\": false,\n            \"created_at\": \"2024-05-08\"\n        },\n        {\n            \"thread\": 5,\n            \"id\": 3,\n            \"sender\": 1,\n            \"text\": \"sms 2\",\n            \"is_read\": false,\n            \"created_at\": \"2024-05-08\"\n        },\n        {\n            \"thread\": 5,\n            \"id\": 4,\n            \"sender\": 1,\n            \"text\": \"sms 3\",\n            \"is_read\": false,\n            \"created_at\": \"2024-05-08\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User Thread",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{locallhost}}api/chat/threads/user/:pk/",
+					"host": [
+						"{{locallhost}}api"
+					],
+					"path": [
+						"chat",
+						"threads",
+						"user",
+						":pk",
+						""
+					],
+					"variable": [
+						{
+							"key": "pk",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get User Thread",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{locallhost}}api/chat/threads/user/:pk/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"chat",
+								"threads",
+								"user",
+								":pk",
+								""
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 May 2024 01:02:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "204"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 6,\n            \"participants\": [\n                3,\n                4\n            ],\n            \"created_at\": \"2024-05-08\",\n            \"updated_at\": \"2024-05-08\",\n            \"last_message\": {\n                \"thread\": null,\n                \"sender\": null,\n                \"text\": \"\",\n                \"is_read\": false\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Thread",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1MjAyNTQ4LCJpYXQiOjE3MTUyMDIyNDgsImp0aSI6IjExZjgwOTY5YWU1NTQwYmI4NjFjMDVlOGQxMjJmNGY4IiwidXNlcl9pZCI6MX0.HLULdaNfr145zbo1XtuFx3KQqWP0vl_JsqKvfqbmLzQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{locallhost}}api/chat/threads/:pk",
+					"host": [
+						"{{locallhost}}api"
+					],
+					"path": [
+						"chat",
+						"threads",
+						":pk"
+					],
+					"variable": [
+						{
+							"key": "pk",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Thread",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{locallhost}}api/chat/threads/:pk/",
+							"host": [
+								"{{locallhost}}api"
+							],
+							"path": [
+								"chat",
+								"threads",
+								":pk",
+								""
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 May 2024 01:01:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "locallhost",
+			"value": "http://0.0.0.0:8000/"
+		}
+	]
+}
