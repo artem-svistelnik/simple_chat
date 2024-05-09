@@ -37,3 +37,6 @@ http://0.0.0.0:8000/api/auth/token/
 * 5)marking the message as read PUT http://0.0.0.0:8000/api/chat/messages/:pk/
 * 6)retrieving a number of unread messages for the user GET api/chat/messages/unread/
 
+Creds:
+usernames: admin, user2, user3, user4, user5
+password: admin
