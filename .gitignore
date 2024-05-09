@@ -3,7 +3,6 @@ __pypackages__/
 .env
 venv/
 .DS_Store
-.idea
 .idea/
 
 *sqlite3
